@@ -1,5 +1,7 @@
 #!/bin/bash
-TOMCAT_DIR = "cpk/cpk_app/apache/tomcat"
+
+#APP_DIR="${ENV_NAME:0:3}_app"
+TOMCAT_DIR="/cpk/cpk_app/apache/tomcat"
 # Enter the specific tomcat directory
 cd "$TOMCAT_DIR" || { echo "Directory not found"; exit 1; }
 
@@ -14,7 +16,7 @@ if [ $? -eq 0 ]; then
     unlink rel 2>/dev/null #if it exists
 
     # creating new symlink to the new version
-    ls -sf "$TOMCAT_DIR"/apache-tomcat-9.0.95 rel
+    ln -sf "$TOMCAT_DIR"/apache-tomcat-9.0.95 rel
     echo "Tomcat installation completed successfully."
 else
     echo "Error downloading Tomcat."
