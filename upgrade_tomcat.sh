@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #APP_DIR="${ENV_NAME:0:3}_app"
-TOMCAT_DIR="/cpk/cpk_app/apache/tomcat"
+TOMCAT_DIR="/svw/svw_app/apache/tomcat"
 # Enter the specific tomcat directory
 cd "$TOMCAT_DIR" || { echo "Directory not found"; exit 1; }
 
